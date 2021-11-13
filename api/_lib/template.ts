@@ -65,6 +65,15 @@ function getCss(theme: string, fontSize: string) {
         content: '\`';
     }
 
+    .insigna {
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        font-size: 2.8em;
+        font-weight: bolder;
+        color: ${foreground};
+    }
+
     .logo-wrapper {
         display: flex;
         align-items: center;
@@ -114,6 +123,7 @@ export function getHtml(parsedReq: ParsedRequest) {
         ${getCss(theme, fontSize)}
     </style>
     <body>
+        <div class="insigna">Citizen-22</div>
         <div>
             <div class="spacer">
             <div class="logo-wrapper">
