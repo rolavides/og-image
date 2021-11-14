@@ -11,6 +11,8 @@ const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
+const lowpoly = readFileSync(`${__dirname}/../lowpoly.js`);
+
 function getCss(theme: string, fontSize: string) {
     let foreground = 'black';
 
@@ -118,12 +120,15 @@ export function getHtml(parsedReq: ParsedRequest) {
     const { text, theme, md, fontSize, images, widths, heights } = parsedReq;
     return `<!DOCTYPE html>
 <html>
+    <head>
     <meta charset="utf-8">
     <title>Generated Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         ${getCss(theme, fontSize)}
     </style>
+    <script>${lowpoly}</script>
+    </head>
     <body>
 	<div id="bg"></div>
         <div class="insigna">Citizen-22</div>
