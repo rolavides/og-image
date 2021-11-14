@@ -61,8 +61,8 @@ function getCss(theme: string, fontSize: string) {
 
     .insigna {
         position: fixed;
-        top: 40px;
-        left: 40px;
+        top: 120px;
+        left: 80px;
         font-size: 2.8em;
         font-weight: bolder;
         color: ${foreground};
