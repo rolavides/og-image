@@ -44,10 +44,6 @@ function getCss(theme: string, fontSize: string) {
       }
 
     body {
-        background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
-        height: 100vh;
         display: flex;
         text-align: center;
         align-items: center;
@@ -109,6 +105,15 @@ function getCss(theme: string, fontSize: string) {
         font-style: normal;
         color: ${foreground};
         line-height: 1.8;
+    }
+	
+    #bg {
+        z-index: -10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }`;
 }
 
@@ -123,6 +128,7 @@ export function getHtml(parsedReq: ParsedRequest) {
         ${getCss(theme, fontSize)}
     </style>
     <body>
+	<div id="bg"></div>
         <div class="insigna">Citizen-22</div>
         <div>
             <div class="spacer">
