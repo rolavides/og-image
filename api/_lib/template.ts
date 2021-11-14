@@ -113,6 +113,13 @@ function getCss(theme: string, fontSize: string) {
         width: 100%;
 	height: 100%;
 	background: url("https://raymond.olavides.com/assets/poly.svg") no-repeat 0 0;
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, #f0f0f0 0%, #777 100%);
+        overflow: hidden;
     }`;
 }
 
